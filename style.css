@@ -1,0 +1,48 @@
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #fff8b0 0%, #f5d33a 50%, #fff8b0 100%);
+    color: #ffffff;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    gap: 20px;
+    height: auto;
+}
+
+.left-panel {
+    flex: 0 0 auto;
+}
+
+.right-panel {
+    flex: 1;
+}
+
+
+.stats-container {
+    background-color: #3a3a3a;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stat-name {
+    font-weight: bold;
+}
+
+.stat-main {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 10px;
+}
