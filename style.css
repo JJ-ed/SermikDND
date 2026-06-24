@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
 }
 
-.game-container {
+.main-container {
     display: flex;
     gap: 20px;
     height: auto;
@@ -20,12 +20,17 @@ body {
     flex: 1;
 }
 
-
-.stats-container {
+.stats-container, .header-container, .output-container {
     background-color: #3a3a3a;
     border: 2px solid #555;
     border-radius: 8px;
     padding: 20px;
+    margin: 0 0 20px 0;
+}
+
+.stats-container {
+    padding: 30px 20px 0 20px;
+    width: auto;
 }
 
 .stat-row {
@@ -45,8 +50,18 @@ body {
     background: #ffffff;
 
     box-shadow:
-    0 0 0 3px #ffffff,
-    0 0 0 7px #000000;
+    0 0 0 1px #ffffff,
+    0 0 0 2px #000000;
+}
+
+.stat-main::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background: transparent;
 }
 
 .stat-name  {
@@ -55,8 +70,9 @@ body {
     padding: 4px;
 
     background-color: #ffffff;
-    color: #6b4a1f;
-    font-size: 12px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
     width: 110%;
     text-align: center;
 
