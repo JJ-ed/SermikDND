@@ -152,6 +152,17 @@ input::-webkit-inner-spin-button {
     pointer-events: none; 
 }
 
+.output-content {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.output-circles {
+    display: flex;
+    flex-direction: column;
+}
+
 .output-row {
     position: relative;
     isolation: isolate;
@@ -205,6 +216,7 @@ input::-webkit-inner-spin-button {
 }
 
 .incoming-damage-value, .percentage-dmg-value {
+    
     font-size: 24px;
     color: #000000;
     text-align: center;

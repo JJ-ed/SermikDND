@@ -1,0 +1,1 @@
+const addCreatureButton = document.querySelector('.add-creature');
