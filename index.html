@@ -16,46 +16,60 @@
                     <div class="stat-row">
                         <div class="stat-main">
                             <span class="stat-name">DEFENSE</span>
-                            <input type="number" class="stat-value" value="0">
+                            <input type="number" class="stat-value" id="defense-value" value="0">
                         </div>
-                        <span class="stat-bonus">0%</span>
+                        <div class="stat-input-row">
+                            <input type="number" class="stat-bonus" id="defense-bonus" value="0">
+                            <span class="stat-bonus-label">%</span>
+                        </div>
                     </div>
                     <div class="stat-row">
                         <div class="stat-main">
                             <span class="stat-name">RESISTANCE</span>
-                            <span class="stat-value">10</span>
+                            <input type="number" class="stat-value" id="resistance-value" value="0">
                         </div>
-                        <span class="stat-bonus">0%</span>
+                        <div class="stat-input-row">
+                            <input type="number" class="stat-bonus" id="resistance-bonus" value="0">
+                            <span class="stat-bonus-label">%</span>
+                        </div>
                     </div>
                     <div class="stat-row">
                         <div class="stat-main">
                             <span class="stat-name">ATTACK</span>
-                            <span class="stat-value">10</span>
+                            <input type="number" class="stat-value" id="attack-value" value="0">
                         </div>
-                        <span class="stat-bonus">0%</span>
+                        <div class="stat-input-row">
+                            <input type="number" class="stat-bonus" id="attack-bonus" value="0">
+                            <span class="stat-bonus-label">%</span>
+                        </div>
                     </div>
                     <div class="stat-row">
                         <div class="stat-main">
                             <span class="stat-name">MAGIC</span>
-                            <span class="stat-value">10</span>
+                            <input type="number" class="stat-value" id="magic-value" value="0">
                         </div>
-                        <span class="stat-bonus">0%</span>
+                        <div class="stat-input-row">
+                            <input type="number" class="stat-bonus" id="magic-bonus" value="0">
+                            <span class="stat-bonus-label">%</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="right-panel">
                 <div class="output-container">
                     <div class="output-content">
-                        <div class="output-header">
-                            <h2>Damage Output</h2>
-                        </div>
-                        <div class="output-body">
+                        <div class="output-row">
                             <div class="incoming-damage-name output-item">
-                                <span class="incoming-damage-value">10</span>
+                                <input type="number" class="incoming-damage-value" value="0">
                             </div>
-                            <!-- <div class="magic-circle"></div> -->
+                        </div>
+                        
+                        <div class="output-row">
                             <div class="percentage-dmg output-item">
-                                <span class="percentage-dmg-value">10</span>
+                                <input type="number" class="percentage-dmg-value" value="0">
+                            </div>
+                            <div class="result-container">
+
                             </div>
                         </div>
                     </div>
