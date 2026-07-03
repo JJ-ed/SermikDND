@@ -34,6 +34,79 @@ input::-webkit-inner-spin-button {
     margin: 0 0 20px 0;
 }
 
+.creature-container {
+    position: relative;
+}
+
+.creature-popup {
+    position: absolute;  
+    top: 100%;           
+    left: 0;
+    display: flex;
+    flex-direction: column;  
+    gap: 4px;
+    background-color: #3a3a3a;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 8px;
+    z-index: 10;         
+}
+
+.creature-popup[hidden] {
+    display: none;
+}
+
+.creature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+    margin: 4px;
+    z-index: 11;
+}
+
+.new-popup {
+    position: absolute;
+    top: 100%;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #3a3a3a;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 8px;
+    z-index: 10;         
+}
+
+.new-popup[hidden] {
+    display: none;
+}
+
+.creature-close {
+    margin-left: 8px;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.load-popup {
+    position: absolute;
+    top: 100%;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #3a3a3a;
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.load-popup[hidden] {
+    display: none;
+}
+
 .stats-container {
     padding: 30px 20px 0 20px;
     width: auto;
@@ -121,16 +194,17 @@ input::-webkit-inner-spin-button {
 }
 
 .stat-value, .incoming-damage-value, .percentage-dmg-value { 
-    font-size: 24px; 
     width: 30px;
     border: none;
     color: #3a2a10; 
     text-align: center;
 }
 
+.stat-value {
+    width: 40px;
+}
+
 .stat-bonus {
-    width: 30px;
-    font-size: 16px;
     text-align: center;
     background-color: #ffffff;  
     color: #6b4a1f;
@@ -138,8 +212,6 @@ input::-webkit-inner-spin-button {
     border: 1.5px solid #000000;
     border-radius: 61%;
     padding: 4px;
-    
-    transform: translateY(-25px);
 }
 
 .stat-bonus-label {
@@ -149,6 +221,11 @@ input::-webkit-inner-spin-button {
     transform: translateY(-50%);
     color: #000000;
     font-size: 16px;
+    pointer-events: none; 
+}
+
+.percentage-dmg-label {    
+    color: #000000;
     pointer-events: none; 
 }
 
@@ -213,13 +290,12 @@ input::-webkit-inner-spin-button {
     z-index: 1;
     border-radius: 90px;
     border-top: none;
-}
 
-.incoming-damage-value, .percentage-dmg-value {
-    
-    font-size: 24px;
-    color: #000000;
-    text-align: center;
+    display: flex;              /* overrides the grid from .output-item */
+    flex-direction: row;        /* number and % side by side */
+    align-items: center;
+    justify-content: center;    /* center the whole group in the circle */
+    gap: 2px;
 }
 
 .result-container {

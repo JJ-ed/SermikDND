@@ -10,13 +10,22 @@
             <div class="header-container">
                 <div class="creature-container">
                     <button class="add-creature">+</button>
-                    <button class="creature">Creature Template</button>
-                    <div class="creature-popup" hidden></div>
+                    <div class="creature-popup" hidden>
+                        <button class="popup-option" data-action="new">New</button>
+                        <button class="popup-option" data-action="load">Load</button>
+                    </div>
+                    <div class="new-popup" hidden>
+                        <input type="text" class="creature-name" placeholder="Creature Name">
+                    </div>
+                    <div class="load-popup" hidden>
+                        <ul class="creature-list"></ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="main-container">
             <div class="left-panel">
+                
                 <div class="stats-container" id="stats">
                     <div class="stat-row">
                         <div class="stat-main">
@@ -73,8 +82,12 @@
                             <div class="output-row">
                                 <div class="percentage-dmg output-item">
                                     <input type="number" class="percentage-dmg-value" value="0">
+                                    <span class="percentage-dmg-label">%</span>
                                 </div>
                             </div>
+                            <button class="type-damage"></button>
+                            <button class="calculate-damage">Calculate</button>
+                            <button class="save-stats" data-action="save">Save</button>
                         </div>
                         <div class="result-container"></div>
                     </div>
