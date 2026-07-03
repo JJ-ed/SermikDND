@@ -232,8 +232,8 @@ function calcDMG() {
     const attackResult = stats.attack * (percentageDmgValue / 100);
     const magicResult = stats.magic * (percentageDmgValue / 100);
 
-    const resistanceTaken = stats.resistance - incomingDamageValue;
-    const defenseTaken = stats.defense - incomingDamageValue;
+    const resistanceTaken = incomingDamageValue - stats.resistance;
+    const defenseTaken = incomingDamageValue - stats.defense;
     
     const isPhysical = document.querySelector('.type-damage').textContent.trim() === 'Physical';
     const label = isPhysical ? 'Physical Damage' : 'Magic Damage';
